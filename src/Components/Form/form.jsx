@@ -16,19 +16,24 @@ export const Form = ({ refetchCard }) => {
   };
   return (
     <>
-      <form className="flex justify-center" onSubmit={handleSubmit(submit)}>
-        <div className=" flex justify-center flex-col w-[200px] ">
+      <form className=" mx-auto justify-center" onSubmit={handleSubmit(submit)}>
+        <div className=" flex justify-center mx-auto mt-[50px] w-[200px] ">
           <input
-            className="bg-red-500 py-[20px]"
+            className="bg-red-500 py-[20px] text-white pl-[20px] capitalize rounded-[10px] outline-none"
             {...register("title")}
             type="text"
           />
           <input
-            className="bg-blue-500  py-[20px]  text-white"
+            className="bg-blue-500  py-[20px]  text-white pl-[20px] capitalize rounded-[10px] outline-none"
             {...register("description")}
             type="text"
           />
-          <button type="submit" className="bg-green-500">
+        </div>
+        <div className="text-center w-[402px] mx-auto">
+          <button
+            type="submit"
+            className="bg-green-500 text-white py-[20px] w-[100%] rounded-[10px] mt-[10px]"
+          >
             Send
           </button>
         </div>
